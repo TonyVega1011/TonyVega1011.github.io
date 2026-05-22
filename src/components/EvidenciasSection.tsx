@@ -7,6 +7,34 @@ interface Evidencia {
 }
 const BASE =
   "https://raw.githubusercontent.com/TonyVega1011/bases-datos-2-evidencias/main/Repo%20semestre%20BD2";
+const descsMongo = [
+  "insertOne — Inserta una caba\u00f1a (\u201cCozy Cabin Retreat\u201d) con tipo y precio.",
+  "insertOne — Inserta un loft con direcci\u00f3n anidada (pa\u00eds y mercado).",
+  "insertMany — Inserta m\u00faltiples documentos en una sola operaci\u00f3n.",
+  "Error duplicado — Intenta insertar un _id ya existente para observar el error de clave duplicada.",
+  "Error duplicado — Variaci\u00f3n del ejercicio anterior con mismo escenario de duplicado.",
+  "find + filtro — Busca propiedades en Brasil mostrando nombre y precio.",
+  "find + $gt — Filtra propiedades con m\u00e1s de 5 camas.",
+  "find + $lt — Busca propiedades con precio menor a $75.",
+  "find + $and — Filtra apartamentos en el mercado de Nueva York con $and.",
+  "find + $in — Busca propiedades de tipo \u201cHouse\u201d o \u201cCondominium\u201d con $in.",
+  "find + $regex — Busca propiedades cuyo nombre contiene \u201cLuxury\u201d (insensible a may\u00fasculas).",
+  "find en array — Filtra propiedades que tienen \u201cHeating\u201d en su lista de amenidades.",
+  "find + $size — Busca propiedades con exactamente 20 amenidades.",
+  "find + sort + limit — Lista las 10 propiedades m\u00e1s caras ordenadas por precio descendente.",
+  "find nulos — Encuentra propiedades sin last_review, ordenadas por n\u00famero de rese\u00f1as.",
+  "updateOne + $set — Actualiza el tipo de propiedad de \u201cCozy Cabin Retreat\u201d.",
+  "updateOne + $push — Actualiza resumen y agrega \u201cSmart TV\u201d a las amenidades de una caba\u00f1a.",
+  "updateMany + $inc — Incrementa en 1 el contador de rese\u00f1as de todas las propiedades en Espa\u00f1a.",
+  "updateMany + $pull — Elimina \u201cCable TV\u201d de la lista de amenidades en todos los documentos que la tengan.",
+  "updateOne + upsert — Actualiza o inserta (\u201cMansi\u00f3n de Prueba\u201d) si no existe, usando la opci\u00f3n upsert: true.",
+  "aggregate + $count — Cuenta cu\u00e1ntas propiedades tienen m\u00e1s de 10 amenidades usando $expr y $size.",
+  "aggregate + $group — Agrupa por pa\u00eds y calcula el precio promedio, ordenado de mayor a menor.",
+  "aggregate + $unwind — Descompone el array de amenidades y obtiene las 5 m\u00e1s frecuentes en toda la colecci\u00f3n.",
+  "aggregate + $group — Agrupa por tipo de propiedad y cuenta el total de listings por cada tipo.",
+  "aggregate + $project — Proyecta nombre, precio y convierte el precio a entero con $toInt.",
+  "aggregate + $avg — Filtra propiedades con \u226510 rese\u00f1as y calcula el puntaje promedio de calificaci\u00f3n.",
+];
 const evidencias: Evidencia[] = [
   // ── MongoDB ejercicios (26) · 11/05/2026 ──
   ...[
@@ -155,34 +183,6 @@ const evidencias: Evidencia[] = [
       "Introducci\u00f3n a DECLARE y BEGIN. Primer acercamiento a bloques PL/SQL. Declara variables tipadas (%TYPE) y consulta datos de un empleado.",
     rawUrl: `${BASE}/Script%20BEGIN%2C%2013-02-2026.txt`,
   },
-];
-const descsMongo = [
-  "insertOne — Inserta una caba\u00f1a (\u201cCozy Cabin Retreat\u201d) con tipo y precio.",
-  "insertOne — Inserta un loft con direcci\u00f3n anidada (pa\u00eds y mercado).",
-  "insertMany — Inserta m\u00faltiples documentos en una sola operaci\u00f3n.",
-  "Error duplicado — Intenta insertar un _id ya existente para observar el error de clave duplicada.",
-  "Error duplicado — Variaci\u00f3n del ejercicio anterior con mismo escenario de duplicado.",
-  "find + filtro — Busca propiedades en Brasil mostrando nombre y precio.",
-  "find + $gt — Filtra propiedades con m\u00e1s de 5 camas.",
-  "find + $lt — Busca propiedades con precio menor a $75.",
-  "find + $and — Filtra apartamentos en el mercado de Nueva York con $and.",
-  "find + $in — Busca propiedades de tipo \u201cHouse\u201d o \u201cCondominium\u201d con $in.",
-  "find + $regex — Busca propiedades cuyo nombre contiene \u201cLuxury\u201d (insensible a may\u00fasculas).",
-  "find en array — Filtra propiedades que tienen \u201cHeating\u201d en su lista de amenidades.",
-  "find + $size — Busca propiedades con exactamente 20 amenidades.",
-  "find + sort + limit — Lista las 10 propiedades m\u00e1s caras ordenadas por precio descendente.",
-  "find nulos — Encuentra propiedades sin last_review, ordenadas por n\u00famero de rese\u00f1as.",
-  "updateOne + $set — Actualiza el tipo de propiedad de \u201cCozy Cabin Retreat\u201d.",
-  "updateOne + $push — Actualiza resumen y agrega \u201cSmart TV\u201d a las amenidades de una caba\u00f1a.",
-  "updateMany + $inc — Incrementa en 1 el contador de rese\u00f1as de todas las propiedades en Espa\u00f1a.",
-  "updateMany + $pull — Elimina \u201cCable TV\u201d de la lista de amenidades en todos los documentos que la tengan.",
-  "updateOne + upsert — Actualiza o inserta (\u201cMansi\u00f3n de Prueba\u201d) si no existe, usando la opci\u00f3n upsert: true.",
-  "aggregate + $count — Cuenta cu\u00e1ntas propiedades tienen m\u00e1s de 10 amenidades usando $expr y $size.",
-  "aggregate + $group — Agrupa por pa\u00eds y calcula el precio promedio, ordenado de mayor a menor.",
-  "aggregate + $unwind — Descompone el array de amenidades y obtiene las 5 m\u00e1s frecuentes en toda la colecci\u00f3n.",
-  "aggregate + $group — Agrupa por tipo de propiedad y cuenta el total de listings por cada tipo.",
-  "aggregate + $project — Proyecta nombre, precio y convierte el precio a entero con $toInt.",
-  "aggregate + $avg — Filtra propiedades con \u226510 rese\u00f1as y calcula el puntaje promedio de calificaci\u00f3n.",
 ];
 export default function EvidenciasSection() {
   const [panelOpen, setPanelOpen] = useState(false);
