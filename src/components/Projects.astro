@@ -1,20 +1,13 @@
 ---
-// TODO: List some projects
+import EvidenciasSection from "../components/EvidenciasSection";
 const projects = [
   {
     name: "Presentación Personal",
     URL: "https://youtube.com/shorts/1NmSmmQUNbs",
     color: "var(--ctp-lavender)",
   },
-  {
-    name: "Evidencias” (SQL | PL/SQL Scripts| NoSQL | Proyecto)",
-    URL: "https://github.com/TonyVega1011/bases-datos-2-evidencias/tree/main/Repo%20semestre%20BD2",
-    target:"_blank",
-    color: "var(--ctp-peach)",
-  },
 ];
 ---
-
 <section class="project">
   <div class="content">
     <h2 class="section-title">Projects</h2>
@@ -43,6 +36,7 @@ const projects = [
         ))
       }
     </div>
+    <EvidenciasSection client:load />
   </div>
 </section>
 
